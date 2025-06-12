@@ -22,7 +22,7 @@ function addBookToLibrary(title, author, pages, hasRead) {
 function displayBooks() {
     const onScreenLibrary = document.getElementById('library');
     onScreenLibrary.innerHTML = '';
-    
+
     if (myLibrary.length === 0) {
         onScreenLibrary.textContent = 'No books to display';
         return
@@ -30,6 +30,7 @@ function displayBooks() {
     myLibrary.forEach(book => {
 
         const card = document.createElement('div');
+        card.classList.add('card');
         
         const title = document.createElement('h2');
         title.textContent = book.title;
