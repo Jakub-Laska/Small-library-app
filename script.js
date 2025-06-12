@@ -1,6 +1,6 @@
 const myLibrary = [  
-    { title: "The Hobbit", author: "J.R.R. Tolkien", pages: '295', hasRead: true },
-    { title: "1984", author: "George Orwell" }
+    new Book("The Hobbit", "J.R.R. Tolkien", 295, true),
+    new Book("1984", "George Orwell", 185, false)
 ];
 
 
@@ -9,11 +9,6 @@ function Book(title, author, pages, hasRead) {
   this.author = author;
   this.pages = pages;
   this.hasRead = hasRead;
-
-  this.info = function () {
-    const readStatus = this
-    return `${this.title} by ${this.author}, ${this.pages} pages, ${readStatus}`;
-  };
 }
 
 function addBookToLibrary(title, author, pages, hasRead) {
@@ -21,11 +16,13 @@ function addBookToLibrary(title, author, pages, hasRead) {
     
     newBook.id = crypto.randomUUID();
     myLibrary.push(newBook);
+    return newBook;
 }
 
 function displayBooks() {
     const onScreenLibrary = document.getElementById('library');
-
+    onScreenLibrary.innerHTML = '';
+    
     if (myLibrary.length === 0) {
         onScreenLibrary.textContent = 'No books to display';
         return
@@ -44,7 +41,7 @@ function displayBooks() {
         pages.textContent = `Pages: ${book.pages}`;
 
         const readStatus = document.createElement('p');
-        readStatus.textContent = `book.hasRead ? "already read" : "not read yet"`;
+        readStatus.textContent = `${book.hasRead ? "already read" : "not read yet"}`;
 
         card.appendChild(title);
         card.appendChild(author);
@@ -63,7 +60,3 @@ displayBooks();
 
 
 
-const theHobbit = new Book("The Hobbit", "J.R.R. Tolkien", 295, true);
-
-const druga = new Book("druga", "stefan", 12, false);
-console.log(theHobbit.info());
