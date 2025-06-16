@@ -1,8 +1,48 @@
+:root {
+  --primary-white: #fff;
+  --secondary-white: #f2dfd7;
+  --dark-white: #ffffffe7;
+  --accent-color: #D4C1EC;
+  --text-color: #333333;
+  --primary-blue: #9F9FED;
+  --secondary-blue: #736CED;
+  --border-radius: 16px;
+}
+body {
+    background-color: var(--primary-white);
+}
 #library {
     display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5vw;
+    padding: 10vw;
+    color: var(--text-color);
+    background-color: var(--primary-white);
+}
+#header {
+    padding: 2.5vw;
+    background-color: var(--accent-color);
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.4);
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    position: relative;
 }
 .card {
-    border: solid 1px red;
+    border-bottom: solid 5px var(--secondary-white);
+    padding: 5vw 2.5vw ;
+    border-radius: var(--border-radius);
+    background-color: var(--primary-white);
+    box-shadow: -2px 2px 15px var(--secondary-white);
+    text-align: center;
 }
+.card:hover {
+    transform: translateY(-30px);
+    cursor: pointer;
+    border: outset 2px var(--accent-color);
+    box-shadow: -2px 2px 20px var(--accent-color);
+}
+h2 {
+    text-shadow: none;
+    padding: 1vw;
+}
+

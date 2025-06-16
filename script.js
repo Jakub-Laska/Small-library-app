@@ -1,5 +1,10 @@
 const myLibrary = [  
     new Book("The Hobbit", "J.R.R. Tolkien", 295, true),
+    new Book("1984", "George Orwell", 185, false),
+    new Book("1984", "George Orwell", 185, false),
+    new Book("1984", "George Orwell", 185, false),
+    new Book("1984", "George Orwell", 185, false),
+    new Book("1984", "George Orwell", 185, false),
     new Book("1984", "George Orwell", 185, false)
 ];
 
