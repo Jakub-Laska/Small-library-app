@@ -18,6 +18,7 @@ body {
     padding: 10vw;
     color: var(--text-color);
     background-color: var(--primary-white);
+    overflow: hidden;
 }
 #header {
     padding: 2.5vw;
@@ -25,7 +26,9 @@ body {
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.4);
     border-bottom-left-radius: var(--border-radius);
     border-bottom-right-radius: var(--border-radius);
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 2;
 }
 .card {
     border-bottom: solid 5px var(--secondary-white);
