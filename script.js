@@ -61,7 +61,12 @@ function displayBooks() {
 displayBooks();
 
 
+const addBtn = document.getElementById('add-btn');
+addBtn.addEventListener('click', () => {
+    const leftMenu = document.querySelector('.menu-left');
 
+    leftMenu.classList.toggle('menu-left-show'); 
+});
 
 
 
