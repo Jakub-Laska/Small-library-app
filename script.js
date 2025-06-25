@@ -60,14 +60,21 @@ function displayBooks() {
 
 displayBooks();
 
-
+    const modal = document.getElementById('formPopUp');
+    const body = document.body;
 const addBtn = document.getElementById('add-btn');
 addBtn.addEventListener('click', () => {
-    const leftMenu = document.querySelector('.menu-left');
 
-    leftMenu.classList.toggle('menu-left-show'); 
+
+    modal.classList.toggle('hidden'); 
+    body.classList.toggle('scrollHidden');
 });
 
 
 
+const popUpExitBtn = document.getElementById('popUpExit');
+popUpExitBtn.addEventListener('click', () => {
 
+    modal.classList.toggle('hidden'); 
+    body.classList.toggle('scrollHidden');
+})

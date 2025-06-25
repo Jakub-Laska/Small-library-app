@@ -18,7 +18,7 @@ body {
 }
 #library {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 5vw;
     padding: var(--padding-primary);
     color: var(--text-color);
@@ -26,38 +26,21 @@ body {
     overflow: hidden;
     padding: 10vw 20vw;
 }
-#menu {
-    border: 1px solid red;
+#addBtn {
     position: fixed;
-    top: 2vw;
-    right: 2vw;
-    padding: 6px;
-    display: grid;
-    grid-auto-flow: column;
-    gap: 4px;
+    top: 3vw;
+    right: 3vw;
+    transform: scale(2);
 }
-#menu-right {
-    display: grid;
+#add-btn:focus,
+#popUpExit:focus {
+    outline: none;
 }
-.menu-left {
-    display: none;
-}
-.menu-left-show {
-    display: grid;
-}
-#header {
-    padding: 2.5vw;
-    background-color: #f2dfd7;
-    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.4);
-    border-bottom-left-radius: var(--border-radius);
-    border-bottom-right-radius: var(--border-radius);
-    position: sticky;
-    top: 0;
-    z-index: 2;
-}
-.card {
+
+.card,
+#popUp {
     border-bottom: solid 5px var(--secondary-white);
-    padding: 5vw 2.5vw ;
+    padding: 5vw 3vw ;
     border-radius: var(--border-radius);
     background-color: var(--primary-white);
     box-shadow: -2px 2px 15px var(--secondary-white);
@@ -73,4 +56,43 @@ h2 {
     text-shadow: none;
     padding: 1vw;
 }
+.scrollHidden {
+    overflow: hidden;
+}
 
+.modal {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+}
+.hidden {
+    display: none;
+}
+#popUp {
+    width: 40vw;
+    height: 30vw;
+    position: relative;
+}
+#popUpExit img {
+    transform: rotate(45deg) scale(1.5);
+}
+#popUpExit {
+    border-radius: 50%;
+    border: outset 4px var(--secondary-white);
+    background-color: var(--primary-white);
+    padding: 1vw;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+#popUpExit:hover {
+    border: inset 4px var(--accent-color);
+    box-shadow: -2px 2px 20px var(--accent-color);
+}
