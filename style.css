@@ -32,6 +32,12 @@ body {
     right: 3vw;
     transform: scale(2);
 }
+#add-btn {
+    transition: transform .5s ease-in-out;
+}
+#add-btn:hover {
+    transform: rotate(360deg) scale(1.5);
+}
 #add-btn:focus,
 #popUpExit:focus {
     outline: none;
