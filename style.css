@@ -39,7 +39,8 @@ body {
     transform: rotate(360deg) scale(1.5);
 }
 #add-btn:focus,
-#popUpExit:focus {
+#popUpExit:focus,
+input:focus {
     outline: none;
 }
 
@@ -84,6 +85,7 @@ h2 {
 #popUp {
     width: 40vw;
     height: 30vw;
+    padding: 1vw;
     position: relative;
 }
 #popUpExit img {
@@ -101,4 +103,33 @@ h2 {
 #popUpExit:hover {
     border: inset 4px var(--accent-color);
     box-shadow: -2px 2px 20px var(--accent-color);
+}
+label {
+    font-size: 1.5vw;
+    font-weight: 900;
+    color: var(--text-color);
+}
+form {
+    display: grid;
+    grid-auto-flow: row;
+    justify-content: center;
+    gap: 2vw;
+    padding: 1vw;
+    margin-top: 1vw;
+}
+input {
+    padding: 1vw;
+    text-align: center;
+    border: outset 1px var(--secondary-white);
+    border-radius: var(--border-radius);
+    box-shadow: 1px 1px 4px var(--text-color);
+    color: var(--text-color);
+}
+input:focus {
+    border: inset 1px var(--accent-color);
+    box-shadow: 1px 1px 4px var(--accent-color);
+}
+#submitBtn {
+    font-size: 1.2vw;
+    font-weight: 900;
 }
