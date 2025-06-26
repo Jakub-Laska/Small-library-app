@@ -78,3 +78,21 @@ popUpExitBtn.addEventListener('click', () => {
     modal.classList.toggle('hidden'); 
     body.classList.toggle('scrollHidden');
 })
+
+const form = document.getElementById('popUpForm');
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const inputTitle = document.getElementById('inputTitle');
+    const newBookTitle = inputTitle.value;
+    const inputAuthor = document.getElementById('inputAuthor');
+    const newBookAuthor = inputAuthor.value;
+    const inputPages = document.getElementById('inputPages');
+    const newBookPages = inputPages.value;
+
+    addBookToLibrary(newBookTitle, newBookAuthor, newBookPages, false);
+    displayBooks();
+
+    modal.classList.toggle('hidden'); 
+    body.classList.toggle('scrollHidden');
+})
