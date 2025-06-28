@@ -46,6 +46,7 @@ input:focus {
 
 .card,
 #popUp {
+    position: relative;
     border-bottom: solid 5px var(--secondary-white);
     padding: 5vw 3vw ;
     border-radius: var(--border-radius);
@@ -88,20 +89,23 @@ h2 {
     padding: 1vw;
     position: relative;
 }
-#popUpExit img {
+#popUpExit img,
+.deleteBtn img {
     transform: rotate(45deg) scale(1.5);
 }
-#popUpExit {
+#popUpExit,
+.deleteBtn {
     border-radius: 50%;
-    border: outset 4px var(--secondary-white);
+    border: outset 3px var(--secondary-white);
     background-color: var(--primary-white);
-    padding: 1vw;
+    padding: .5vw;
     position: absolute;
     top: -10px;
     right: -10px;
 }
-#popUpExit:hover {
-    border: inset 4px var(--accent-color);
+#popUpExit:hover,
+.deleteBtn:hover {
+    border: inset 3px var(--accent-color);
     box-shadow: -2px 2px 20px var(--accent-color);
 }
 label {
