@@ -40,7 +40,8 @@ body {
 }
 #add-btn:focus,
 #popUpExit:focus,
-input:focus {
+input:focus,
+.deleteBtn:focus {
     outline: none;
 }
 
@@ -55,7 +56,7 @@ input:focus {
     text-align: center;
 }
 .card:hover {
-    transform: translateY(-30px);
+    transform: translateY(-15px);
     cursor: pointer;
     border: outset 2px var(--accent-color);
     box-shadow: -2px 2px 20px var(--accent-color);
