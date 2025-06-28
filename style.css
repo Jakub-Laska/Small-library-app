@@ -122,7 +122,8 @@ form {
     padding: 1vw;
     margin-top: 1vw;
 }
-input {
+input,
+.readStatusBtn {
     padding: 1vw;
     text-align: center;
     border: outset 1px var(--secondary-white);
@@ -130,11 +131,16 @@ input {
     box-shadow: 1px 1px 4px var(--text-color);
     color: var(--text-color);
 }
-input:focus {
+input:focus,
+.readStatusBtn:hover {
     border: inset 1px var(--accent-color);
     box-shadow: 1px 1px 4px var(--accent-color);
 }
 #submitBtn {
     font-size: 1.2vw;
     font-weight: 900;
+}
+.readStatusBtn {
+    margin-top: 1vw;
+
 }

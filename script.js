@@ -16,6 +16,11 @@ function Book(title, author, pages, hasRead) {
   this.hasRead = hasRead;
 }
 
+Book.prototype.toggleReadStatus = function () {
+  this.hasRead = !this.hasRead;
+    displayBooks();
+};
+
 function addBookToLibrary(title, author, pages, hasRead) {
     const newBook = new Book(title, author, pages, hasRead);
     
@@ -48,8 +53,12 @@ function displayBooks() {
         const pages = document.createElement('p');
         pages.textContent = `Pages: ${book.pages}`;
 
-        const readStatus = document.createElement('p');
+        const readStatus = document.createElement('button');
         readStatus.textContent = `${book.hasRead ? "already read" : "not read yet"}`;
+        readStatus.addEventListener('click', () => {
+            book.toggleReadStatus();
+        });
+        readStatus.classList.add('readStatusBtn');
 
         const deleteBtn = document.createElement('button');
         deleteBtn.classList.add('deleteBtn');
